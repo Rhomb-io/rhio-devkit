@@ -57,3 +57,7 @@ Some libraries have implemented unit testing using [Platformio Unit Tesing](http
 Unit test are located inside the `test` directory and may run using the Platformio command `Test`.
 
 Please consider writing test code whenever possible.
+
+## Contact
+
+Main mainteiner @jenguidanos. Please feel free to post an issue.
