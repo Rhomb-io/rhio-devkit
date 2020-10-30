@@ -6,7 +6,7 @@ The repository contains a Platformio Project and a set de git submodules with rh
 
 ## Target Audience
 
-This repository is for developers. Please follow the indications to collaborate in any project.
+This repository is for developers, not suitable for production. Your collaboration is greatly appreciated. Please follow the indications below to participate in the development.
 
 ## Download and Install
 
@@ -14,6 +14,7 @@ This repository is for developers. Please follow the indications to collaborate 
 
 ```bash
 git submodule add git@github.com:Rhomb-io/rhio-state-machine.git
+git submodule update --remote --merge
 ```
 
 2. Add a main.cpp file. The repository does not contain a main.cpp file by default, you should add it. Each library inside `lib` directory has a custom `main-x.cpp.back` file inside src directory. Duplicate (not remove) the file but naming it as `main.cpp`.
@@ -53,6 +54,6 @@ git submodule update --remote --merge
 
 Some libraries have implemented unit testing using [Platformio Unit Tesing](https://docs.platformio.org/en/latest/plus/unit-testing.html) franework.
 
-Unit test are lcoated inside the `test` directory and may run using the Platformio command `Test`.
+Unit test are located inside the `test` directory and may run using the Platformio command `Test`.
 
 Please consider writing test code whenever possible.
