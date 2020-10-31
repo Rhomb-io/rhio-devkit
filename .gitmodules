@@ -1,3 +1,6 @@
 [submodule "lib/rhio-state-machine"]
 	path = lib/rhio-state-machine
 	url = git@github.com:Rhomb-io/rhio-state-machine.git
+[submodule "lib/rhio-puf"]
+	path = lib/rhio-puf
+	url = git@github.com:Rhomb-io/rhio-puf.git
