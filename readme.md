@@ -60,11 +60,3 @@ Please consider writing test code whenever possible.
 ## Contact
 
 Main mainteiner @jenguidanos. Please feel free to post an issue.
-
-## Development
-
-If you want to contribute to the development, the best way is to use [rhio-devkit](https://github.com/Rhomb-io/rhio-devkit), a project with VSCode and Platformio that includes a development copy of this repository.
-
-## License
-
-Developed by [Rhomb.io](https://rhomb.io) Software Team from Tecnofigners. Licensed under the GNU/GPL V3. Please concat us for commercial license or custom development.
