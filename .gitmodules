@@ -4,3 +4,6 @@
 [submodule "lib/rhio-puf"]
 	path = lib/rhio-puf
 	url = git@github.com:Rhomb-io/rhio-puf.git
+[submodule "lib/rhio-pinmap"]
+	path = lib/rhio-pinmap
+	url = git@github.com:Rhomb-io/rhio-pinmap.git
