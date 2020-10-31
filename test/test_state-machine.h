@@ -1,6 +1,6 @@
 #pragma once
 
-namespace state {
+namespace state_test {
 void init();
 void run();
-}  // namespace state
+}  // namespace state_test
