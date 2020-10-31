@@ -13,8 +13,7 @@ This repository is for developers, not suitable for production. Your collaborati
 1. Clone the repo with the libraries:
 
 ```bash
-git submodule add git@github.com:Rhomb-io/rhio-state-machine.git
-git submodule update --remote --merge
+git clone --recurse-submodules -j8 git@github.com:Rhomb-io/rhio-devkit.git
 ```
 
 2. Add a main.cpp file. The repository does not contain a main.cpp file by default, you should add it. Each library inside `lib` directory has a custom `main-x.cpp.back` file inside src directory. Duplicate (not remove) the file but naming it as `main.cpp`.
@@ -61,3 +60,11 @@ Please consider writing test code whenever possible.
 ## Contact
 
 Main mainteiner @jenguidanos. Please feel free to post an issue.
+
+## Development
+
+If you want to contribute to the development, the best way is to use [rhio-devkit](https://github.com/Rhomb-io/rhio-devkit), a project with VSCode and Platformio that includes a development copy of this repository.
+
+## License
+
+Developed by [Rhomb.io](https://rhomb.io) Software Team from Tecnofigners. Licensed under the GNU/GPL V3. Please concat us for commercial license or custom development.
