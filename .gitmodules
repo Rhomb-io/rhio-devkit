@@ -7,3 +7,6 @@
 [submodule "lib/rhio-pinmap"]
 	path = lib/rhio-pinmap
 	url = git@github.com:Rhomb-io/rhio-pinmap.git
+[submodule "lib/rhio-sync"]
+	path = lib/rhio-sync
+	url = git@github.com:Rhomb-io/rhio-sync.git

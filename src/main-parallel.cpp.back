@@ -1,0 +1,55 @@
+#include <Arduino.h>
+
+#include "rhio-parallel.h"
+#include "rhio-waterfall.h"
+
+Parallel parallel;
+
+unsigned char cb1() {
+  while (!Serial.available()) {
+    parallel.yield();
+  }
+
+  Serial.println("P1");
+  return 0;
+}
+
+unsigned char cb2() {
+  int x = 1;
+  while (x) {
+    if (!Serial.available()) {
+      parallel.yield();
+      continue;
+    }
+
+    char y = Serial.read();
+    if (y == 'a') {
+      Serial.println(y);
+      x = 0;
+    }
+  }
+  Serial.println("P2");
+  return 3;
+}
+
+unsigned char cb3() {
+  Serial.println("P3");
+  return 5;
+}
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("START");
+
+  parallel.add(cb1);
+  parallel.add(cb2);
+  parallel.add(cb3);
+
+  parallel.run([](unsigned char* results) {
+    Serial.println(results[0]);
+    Serial.println(results[1]);
+    Serial.println(results[2]);
+  });
+}
+
+void loop() {}

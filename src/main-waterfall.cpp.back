@@ -1,0 +1,45 @@
+#include <Arduino.h>
+
+#include "rhio-waterfall.h"
+
+void setup() {
+  Serial.begin(9600);
+  unsigned char (*cbs[2])();
+  unsigned char (*cbs2[2])(int p);
+  unsigned char err;
+
+  cbs[0] = []() -> unsigned char {
+    Serial.println("Test 1");
+    return 0;
+  };
+
+  cbs[1] = []() -> unsigned char {
+    Serial.println("Test 2");
+    return 0;
+  };
+
+  err = waterfall(cbs, 2);
+  if (err > 0) {
+    // Something bad happend during the execution of a callback.
+    // `err` should be an error code.
+  }
+
+  cbs2[0] = [](int p) -> unsigned char {
+    Serial.println("Test 3");
+    return 0;
+  };
+
+  cbs2[1] = [](int p) -> unsigned char {
+    Serial.println("Test 4");
+    return 0;
+  };
+
+  err = waterfall(cbs2, 2, 5);
+  if (err > 0) {
+    // Something bad happend during the execution of a callback.
+    // `err` should be an error code.
+  }
+
+}
+
+void loop() {}
