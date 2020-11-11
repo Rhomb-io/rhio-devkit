@@ -10,3 +10,6 @@
 [submodule "lib/rhio-sync"]
 	path = lib/rhio-sync
 	url = git@github.com:Rhomb-io/rhio-sync.git
+[submodule "rhio-ioexpander"]
+	path = rhio-ioexpander
+	url = git@gitlab.com:rhombio/rhio-libraries/rhio-ioexpander.git
