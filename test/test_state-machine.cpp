@@ -27,7 +27,7 @@ void test_state_running_5(void) { TEST_ASSERT_EQUAL(F5, states.getCurrent()); }
 
 int _prevState = -1;
 int _newState = -1;
-void test_on_change(void) {
+void test_state_on_change(void) {
   static int counter = 1;
   switch (counter) {
     case 1:
@@ -58,7 +58,7 @@ void test_on_change(void) {
 void onChange(int prevState, int newState) {
   _prevState = prevState;
   _newState = newState;
-  RUN_TEST(test_on_change);
+  RUN_TEST(test_state_on_change);
 }
 
 void f1() {
