@@ -39,6 +39,12 @@ void setup() {
   concurrent.add(cb2);
   concurrent.add(cb3);
   concurrent.add(cb4);
+
+  while (1) {
+    concurrent.run();
+  }
 }
 
-void loop() { concurrent.run(); }
+void loop() {
+  Serial.println("This should not be called never");
+}
