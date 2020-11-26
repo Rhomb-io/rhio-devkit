@@ -1,0 +1,36 @@
+#include <Arduino.h>
+#include <rhio-pinmap.h>
+
+#include "rhio-ioexpander.h"
+
+#define DEBUG SerialUSB
+
+RhioIOExpander ioex;
+
+void setup() {
+  DEBUG.begin(9600);
+  unsigned long prev = millis();
+  while (!DEBUG && millis() - prev < 5000)
+    ;
+  DEBUG.println("Init Test leds");
+  delay(1000);
+
+  // Initialize class
+  ioex.begin();
+  ioex.setupIOEXHalley();
+}
+
+void loop() {
+  ioex.redLedOn();
+  ioex.greenLedOn();
+  delay(1000);
+
+  ioex.redLedOff();
+  ioex.blueLedOn();
+  delay(1000);
+
+  ioex.blueLedOff();
+  ioex.greenLedOn();
+  delay(1000);
+  ioex.greenLedOff();
+}
