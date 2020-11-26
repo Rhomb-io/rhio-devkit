@@ -1,0 +1,33 @@
+#######################################
+# Class:
+#######################################
+FXL6408	KEYWORD1
+#######################################
+# Methods and Functions
+#######################################
+begin	KEYWORD2
+seupIOEX	KEYWORD2
+digitalRead	KEYWORD2
+enableSPIMemory	KEYWORD2
+disableSPIMemory	KEYWORD2
+setUARTSlave2	KEYWORD2
+setUARTSlaveCommon	KEYWORD2
+redLedOn	KEYWORD2
+redLedOff	KEYWORD2
+greenLedOn	KEYWORD2
+greenLedOff	KEYWORD2
+blueLedOn	KEYWORD2
+blueLedOff	KEYWORD2
+readInterrupt	KEYWORD2
+
+#######################################
+# Constants
+#######################################
+PORT0   LITERAL1
+PORT1   LITERAL1
+PORT2   LITERAL1
+PORT3   LITERAL1
+PORT4   LITERAL1
+PORT5   LITERAL1
+PORT6   LITERAL1
+PORT7   LITERAL1
