@@ -25,6 +25,42 @@ void test_state_running_4(void) { TEST_ASSERT_EQUAL(F4, states.getCurrent()); }
 
 void test_state_running_5(void) { TEST_ASSERT_EQUAL(F5, states.getCurrent()); }
 
+int _prevState = -1;
+int _newState = -1;
+void test_state_on_change(void) {
+  static int counter = 1;
+  switch (counter) {
+    case 1:
+      TEST_ASSERT_EQUAL(1, _prevState);
+      TEST_ASSERT_EQUAL(2, _newState);
+      break;
+    case 2:
+      TEST_ASSERT_EQUAL(2, _prevState);
+      TEST_ASSERT_EQUAL(3, _newState);
+      break;
+    case 3:
+      TEST_ASSERT_EQUAL(3, _prevState);
+      TEST_ASSERT_EQUAL(4, _newState);
+      break;
+    case 4:
+      TEST_ASSERT_EQUAL(4, _prevState);
+      TEST_ASSERT_EQUAL(5, _newState);
+      break;
+    case 5:
+      TEST_ASSERT_EQUAL(5, _prevState);
+      TEST_ASSERT_EQUAL(1, _newState);
+      break;
+  }
+
+  counter++;
+}
+
+void onChange(int prevState, int newState) {
+  _prevState = prevState;
+  _newState = newState;
+  RUN_TEST(test_state_on_change);
+}
+
 void f1() {
   RUN_TEST(test_state_running_1);
   states.set(F2);
@@ -73,6 +109,8 @@ void init() {
   states.add(F4, f4);
   states.add(F5, f5);
   states.set(F1);
+  states.onChange(onChange);
+
   run();
 }
 
