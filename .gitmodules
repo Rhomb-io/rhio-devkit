@@ -13,3 +13,6 @@
 [submodule "lib/rhio-flash"]
 	path = lib/rhio-flash
 	url = git@github.com:Rhomb-io/rhio-flash.git
+[submodule "rhio-ioexpander"]
+	path = rhio-ioexpander
+	url = git@gitlab.com:rhombio/rhio-libraries/rhio-ioexpander.git
