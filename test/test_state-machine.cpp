@@ -61,23 +61,23 @@ void onChange(int prevState, int newState) {
   RUN_TEST(test_state_on_change);
 }
 
-void f1() {
+stateCallback f1() {
   RUN_TEST(test_state_running_1);
   states.set(F2);
 }
-void f2() {
+stateCallback f2() {
   RUN_TEST(test_state_running_2);
   states.set(F3);
 }
-void f3() {
+stateCallback f3() {
   RUN_TEST(test_state_running_3);
   states.set(F4);
 }
-void f4() {
+stateCallback f4() {
   RUN_TEST(test_state_running_4);
   states.set(F5);
 }
-void f5() {
+stateCallback f5() {
   RUN_TEST(test_state_running_5);
   states.set(F1);
 }
