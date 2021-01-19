@@ -65,10 +65,13 @@ Current list of libraries (inside lib directory)
 Rhio libraries are located in separated repositories and linked here using [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). Use this command to update all the libraries to the latest version:
 
 ```bash
-# update all recursively
+# Update all recursively
 git submodule update --remote --merge
 
-# or update only one library:
+# If previous command throw errors try with this
+git pull --recurse-submodules
+
+# Update only one library:
 git submodule update --recursive lib/rhio-flash
 ```
 
