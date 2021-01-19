@@ -8,7 +8,7 @@
 RhioIOExpander ioex;
 
 void setup() {
-  DEBUG.begin(9600);
+  DEBUG.begin(115200);
   unsigned long prev = millis();
   while (!DEBUG && millis() - prev < 5000)
     ;

@@ -3,7 +3,7 @@
 #include "rhio-waterfall.h"
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   unsigned char (*cbs[2])();
   unsigned char (*cbs2[2])(int p);
   unsigned char err;

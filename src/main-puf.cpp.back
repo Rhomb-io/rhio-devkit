@@ -20,7 +20,7 @@ pufcb event2(int ledStatus) {
 
 void setup() {
   pinMode(9, OUTPUT);
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println(F("SETUP"));
   puf.on(0x01, event1);
   puf.on(0x02, event2);
